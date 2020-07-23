@@ -1,9 +1,14 @@
+
+
 body{
-    background-color: #618685;
+    background-color : #e0e2e4;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .nav-link{
-    color: white;
+    color:#002366;
+    border-bottom: 5px solid #ffef96;
+    font-size: 20px;
 }
 
 h1 {
@@ -14,13 +19,56 @@ h1 {
 .nav {
     margin-top: 20px;
     font-size: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .jumbotron {
-    margin-top: 30px;
-    max-height: 400px;
-    opacity: .5;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-height: 500px;
+    color: white;
+    background-image: url("https://lh3.googleusercontent.com/proxy/sq9KiJAurzYDi4E3P8jokuxXVH6VVheyIWaSw88BE1jVO16uF0YjC6zj6TPUOD_3u2VJDKAQbmA1JbeGn_u6c3J29ph53lTAMKuC1t44zm_nlL87yhssXIXqHWlEf_NP3ZHRFFeuF-nXm1_5wdMnHMs");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200vh;
+    box-shadow: 10px 10px 3px 2px #888888;
 }
 
+.display-4 {
+    color: white;
+    font-size: 55px;
+    border: 5px solid #ffef96;
+}
 
+#desc {
+    margin-top: 80px;
+    margin-right: 80px;
+}
+
+src{
+    max-height: 200px;
+}
+
+.carousel-inner > .item > img {
+  width:640px;
+  height:360px;
+}
+
+.disabled {
+    color: #ffef96;
+}
+
+.lead {
+    font-size: 25px;
+    color: #333333;
+}
+
+img {
+    opacity: 0.5;
+}
+
+.carousel-caption {
+    color: #333333;
+}
