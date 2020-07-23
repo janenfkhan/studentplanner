@@ -1,9 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Add events</title>
 
-    <!-- Font Awesome CSS -->
+	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -24,26 +24,24 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
+
 </head>
 
 <body>
-	<h1>Add events</h1>
+	<nav class="navbar navbar-expand-lg justify-content-center">
+        <h1  class="navbar-brand"> Student Planner </h1>
+	</nav>
 
-	<form method="POST" action="/events/new">
-        <label for="types">What type of event are you adding:</label>
-        <select id="types" name="types">
-            <option value="Academic" id="academic">Academic</option>
-            <option value="Social" id="social">Social</option>
-            <option value="Personal" id="personal">Personal</option>
-        </select>
-		<label for="event_name">Event Name:</label>
-		<input type="text" name="event_name" value="">
-		<label for="date">Date</label>
-		<input type="date" name="date" value="">
-		<label for="description">Description:</label>
-		<input type="text" name="description" value="">
-		<input type="submit" value="Submit">
-    </form>
+    <ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a class="nav-link active" href="/events">View events</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/new">Add events</a>
+		</li>
+	</ul>
+    
+
 </body>
 
 </html>

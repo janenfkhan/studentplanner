@@ -8,7 +8,7 @@
 		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 	<!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
 
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -32,21 +32,24 @@
         <h1  class="navbar-brand"> Student Planner </h1>
 	</nav>
 
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+			<a class="nav-link" href="/schedule">Schedule</a>
+		</li>
+        <li class="nav-item">
+			<a class="nav-link disabled" href="#">Assignments(coming soon)</a>
+		</li>
+        <li class="nav-item">
+			<a class="nav-link disabled" href="#">Internship Seeker(coming soon)</a>
+		</li>
+	</ul>
+    
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<h1 class="display-4">Title</h1>
-			<p class="lead">A little description goes in here</p>
+			<p class="lead"></p>
 		</div>
 	</div>
-
-	<ul class="nav justify-content-center">
-		<li class="nav-item">
-			<a class="nav-link active" href="/events">View events</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/new">Add events</a>
-		</li>
-	</ul>
 
 
 

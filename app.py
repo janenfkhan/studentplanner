@@ -1,5 +1,6 @@
 # ---- YOUR APP STARTS HERE ----
 # -- Import section --
+from datetime import datetime
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -18,14 +19,19 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', time=datetime.now())
 # CONNECT TO DB, ADD DATA
+
+@app.route('/schedule')
+def schedule():
+    return render_template('schedule.html')
+
 
 @app.route('/events')
 def events():
     collection = mongo.db.schedule
     events = collection.find({})
-    return render_template('show_events.html', events = events)
+    return render_template('show_events.html', events = events, time=datetime.now())
 
 @app.route('/new')
 def new():
@@ -36,14 +42,16 @@ def new_event():
     if request.method == "GET":
         return render_template('new_events.html')
     else:
+
         event_name = request.form['event_name']
         date = request.form['date']
         description = request.form['description']
+        types = request.form['types']
         #Connect to a database
         events = mongo.db.schedule
         #Add to the database
-        events.insert({'event': event_name, "date": date, "description": description})
+        events.insert({'event': event_name, "date": date, "description": description, 'types': types})
         
         collection = mongo.db.schedule
         events = collection.find({})
-    return render_template('show_events.html', events = events)
+    return render_template('show_events.html', events = events, time=datetime.now())
