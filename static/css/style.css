@@ -1,11 +1,26 @@
+body{
+    background-color: #618685;
+}
+
+.nav-link{
+    color: white;
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     color: blue;
+}
+
+.nav {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .jumbotron {
     margin-top: 30px;
     max-height: 400px;
+    opacity: .5;
 }
 
 
