@@ -7,8 +7,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-	<!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
+	
 
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -24,14 +23,13 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
+    
+    <!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
 
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg justify-content-center">
-        <h1  class="navbar-brand"> Student Planner </h1>
-	</nav>
-
     <ul class="nav justify-content-center">
         <li class="nav-item">
 			<a class="nav-link" href="/schedule">Schedule</a>
@@ -46,7 +44,7 @@
     
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1 class="display-4">Title</h1>
+			<h1 class="display-4">Student Planner</h1>
 			<p class="lead"></p>
 		</div>
 	</div>
