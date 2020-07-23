@@ -22,10 +22,10 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
     <!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
+	<link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
 </head>
 
-<body style="background-color: #618685;">
+<body >
 	<h1>Add events</h1>
 
 	<form method="POST" action="/events/new">
