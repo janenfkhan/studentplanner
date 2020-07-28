@@ -57,6 +57,7 @@ def index():
 # CONNECT TO DB, ADD DATA
 
 @app.route('/schedule')
+@login_required
 def schedule():
     return render_template('schedule.html', time=datetime.now())
 
