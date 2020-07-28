@@ -112,7 +112,7 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return redirect('/')
+    return render_template("schedule.html")
 
 
 @app.route('/logout')
