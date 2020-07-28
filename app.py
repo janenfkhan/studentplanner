@@ -30,7 +30,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
 # name of database
 app.config['MONGO_DBNAME'] = 'studentplanner'
 # URI of database
-app.config['MONGO_URI'] = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0.gwiez.mongodb.net/studentplanner?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'mongodb+srv://admin:kyfyt5PyhWkJYqeP@cluster0.gwiez.mongodb.net/studentplanner?retryWrites=true&w=majority'
 
 oauth = OAuth(app)
 google = oauth.register(
@@ -59,6 +59,7 @@ def index():
 @app.route('/schedule')
 @login_required
 def schedule():
+    name = dict(session)['profile']['name']
     return render_template('schedule.html', time=datetime.now())
 
 
@@ -89,12 +90,11 @@ def new_event():
         events = collection.find({})
     return render_template('show_events.html', events = events, time=datetime.now())
 
-@app.route('/logged')
-@login_required
-def hello_world():
-    name = dict(session)['profile']['name']
-    return f'Hello, you are logged in as {name}!'
-
+# @app.route('/logged')
+# @login_required
+# def hello_world():
+#     name = dict(session)['profile']['name']
+#     return f'Hello, you are logged in as {name}!'
 @app.route('/login')
 def login():
     google = oauth.create_client('google')  # create the google oauth client
@@ -113,7 +113,7 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return redirect('/logged')
+    return redirect('/schedule')
 
 
 @app.route('/logout')
