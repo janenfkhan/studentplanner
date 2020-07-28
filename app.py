@@ -88,7 +88,7 @@ def new_event():
         events = collection.find({})
     return render_template('show_events.html', events = events, time=datetime.now())
 
-@app.route('/')
+@app.route('/logged')
 @login_required
 def hello_world():
     email = dict(session)['profile']['email']
@@ -112,7 +112,7 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return render_template("schedule.html")
+    return redirect('/logged')
 
 
 @app.route('/logout')
