@@ -68,7 +68,7 @@ def schedule():
 @app.route('/events')
 def events():
     
-    return events.cal()
+    return quickstart.main()
     # collection = mongo.db.schedule
     # events = collection.find({})
     # return render_template('show_events.html', events = events, time=datetime.now())
