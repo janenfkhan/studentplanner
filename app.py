@@ -13,6 +13,7 @@ from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from auth_decorator import login_required
 import quickstart
+import calendar
 
 # -- Initialization section --
 app = Flask(__name__)
@@ -59,9 +60,9 @@ def index():
 @app.route('/schedule')
 @login_required
 def schedule():
-    return quickstart.main()
-#     name = dict(session)['profile']['name']
-#     return render_template('schedule.html', name = name, time=datetime.now())
+    return calendar
+    # name = dict(session)['profile']['name']
+    # return render_template('schedule.html', name = name, time=datetime.now())
 
 
 @app.route('/events')
