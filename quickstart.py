@@ -7,7 +7,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 
 def main():
@@ -50,5 +50,5 @@ def main():
         print(start, event['summary'])
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
