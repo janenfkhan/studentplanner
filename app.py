@@ -13,7 +13,7 @@ from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from auth_decorator import login_required
 import quickstart
-import events
+# import events
 
 # -- Initialization section --
 app = Flask(__name__)
