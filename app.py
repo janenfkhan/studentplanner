@@ -60,7 +60,7 @@ def index():
 @app.route('/schedule')
 @login_required
 def schedule():
-    return events
+    return events.cal()
     # name = dict(session)['profile']['name']
     # return render_template('schedule.html', name = name, time=datetime.now())
 
