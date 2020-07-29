@@ -70,10 +70,9 @@ def index():
 #     name = dict(session)['profile']['name']
 #     return render_template('schedule.html', name = name, time=datetime.now())
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/calendar']
-
 
 def main():
+    SCOPES = ['https://www.googleapis.com/auth/calendar']
     """Shows basic usage of the Google Calendar API.
     Prints the start and name of the next 10 events on the user's calendar.
     """
