@@ -1,5 +1,6 @@
 # ---- YOUR APP STARTS HERE ----
 # -- Import section --
+from __future__ import print_function
 from datetime import datetime
 from flask import Flask
 from flask import render_template
@@ -12,9 +13,6 @@ from flask import url_for, session
 from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from auth_decorator import login_required
-
-from __future__ import print_function
-import datetime
 import pickle
 import os.path
 from googleapiclient.discovery import build
