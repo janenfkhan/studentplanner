@@ -60,16 +60,17 @@ def index():
 @app.route('/schedule')
 @login_required
 def schedule():
-    return events.cal()
-    # name = dict(session)['profile']['name']
-    # return render_template('schedule.html', name = name, time=datetime.now())
+    
+    name = dict(session)['profile']['name']
+    return render_template('schedule.html', name = name, time=datetime.now())
 
 
 @app.route('/events')
 def events():
-    collection = mongo.db.schedule
-    events = collection.find({})
-    return render_template('show_events.html', events = events, time=datetime.now())
+    return events.cal()
+    # collection = mongo.db.schedule
+    # events = collection.find({})
+    # return render_template('show_events.html', events = events, time=datetime.now())
 
 @app.route('/new')
 def new():
