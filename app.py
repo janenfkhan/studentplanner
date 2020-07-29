@@ -67,6 +67,7 @@ def schedule():
 
 @app.route('/events')
 def events():
+    
     return events.cal()
     # collection = mongo.db.schedule
     # events = collection.find({})

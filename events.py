@@ -13,3 +13,4 @@ def cal():
     service = build("calendar", "v3", credentials=credentials)
 
     result = service.calendarList().list().execute()
+    print(result)
