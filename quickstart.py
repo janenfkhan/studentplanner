@@ -33,10 +33,7 @@ def main():
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
             store = Storage(flow)
-            creds = store.get
-            # if not creds or creds.invalid:
-            #     flow = client.flow_from_clientsecrets(CLIENT_SECRETS_FILE, SCOPES)
-            #     creds = tools.run_flow(flow, store)
+            creds = flow.run_local_server(port=5000)
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
