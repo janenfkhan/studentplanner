@@ -9,5 +9,5 @@ def login_required(f):
         # the other data for that user/check if they exist
         if user:
             return f(*args, **kwargs)
-        return render_template("loginrequired.html")
+        return render_template("loginrequired.html", time=datetime.now())
     return decorated_function
