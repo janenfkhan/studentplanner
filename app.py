@@ -69,7 +69,9 @@ def events():
     
     # return quickstart.main()
     collection = mongo.db.schedule
-    events = collection.find({})
+    user = dict(session)['profile']['email']
+    events = collection.find({'user': user})
+
     return render_template('show_events.html', events = events, time=datetime.now())
 
 @app.route('/new')
