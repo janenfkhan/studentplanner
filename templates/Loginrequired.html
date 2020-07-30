@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+
+	<script>
+
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap" rel="stylesheet">
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBY0Swov6Z1F6yRqM-PpaMM810OWpaG7GQ",
+    authDomain: "student-planner-d3133.firebaseapp.com",
+    databaseURL: "https://student-planner-d3133.firebaseio.com",
+    projectId: "student-planner-d3133",
+    storageBucket: "student-planner-d3133.appspot.com",
+    messagingSenderId: "533355319106",
+    appId: "1:533355319106:web:24cdce6888626b0153c2db",
+    measurementId: "G-KCPR9XXVZD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+	</script>
+</head>
+
+<body>
+    <h1> MUST LOGIN TO SEE THIS PAGE <span> <a class="nav-link" href="/index">Go back</a> </span> <h1> 
+</body>
+
+</html>

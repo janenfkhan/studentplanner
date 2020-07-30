@@ -81,6 +81,7 @@ def new_event():
     if request.method == "GET":
         return render_template('new_events.html')
     else:
+        user = dict(session)['profile']['email']
         event_name = request.form['event_name']
         date = request.form['date']
         description = request.form['description']
@@ -88,7 +89,7 @@ def new_event():
         #Connect to a database
         events = mongo.db.schedule
         #Add to the database
-        events.insert({'event': event_name, "date": date, "description": description, 'types': types})
+        events.insert({'event': event_name, "date": date, "description": description, 'types': types, "user":user})
         collection = mongo.db.schedule
         events = collection.find({})
     return render_template('show_events.html', events = events, time=datetime.now())
