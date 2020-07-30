@@ -40,7 +40,7 @@
       <div class="event-list">
         <ul>
             {% if user == "user" %}
-	            <p>Software engineering internships coming soon!</p>
+	            <li>Event: {{event.types}}. {{ event.event }} on {{ event.date }}. Description: {{event.description}}</li>
 	        {% endif %}
 
 
