@@ -1,5 +1,4 @@
 
-
 body{
     background-color : #e0e2e4;
     font-family: 'Varela Round', sans-serif;
@@ -71,4 +70,23 @@ img {
 
 .carousel-caption {
     color: #333333;
+}
+
+tr {
+    width: 100%;
+}
+table {
+    height: 50px;          
+    display: -moz-groupbox;
+    /* font-size: 20px; */
+}
+tbody {
+    overflow-y: scroll;  
+    height: 500px;
+}
+#headers {
+    font-size: 30px;
+}
+#description {
+    width: 60%;
 }
