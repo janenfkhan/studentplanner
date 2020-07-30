@@ -43,7 +43,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
     </head>
     <body>
-      <a class="nav-link active" style="text-align: center; font-size: 50px;" href="/schedule">Event List <span> <a style="text-align:center" class="nav-link" href="/index">Go back</a> </span></a>
+      <a class="nav-link active" style="text-align: center; font-size: 50px;" href="/index">Event List <span> <a style="text-align:center" class="nav-link" href="/schedule">Go back</a> </span></a>
         
         {% for event in events %}
             <div class="jumbotron jumbotron-fluid events">
