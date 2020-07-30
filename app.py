@@ -94,7 +94,7 @@ def new_event():
         events.insert({'event': event_name, "date": date, "description": description, 'types': types, "user":user})
         collection = mongo.db.schedule
         events = collection.find({})
-    return render_template('show_events.html', events = events, time=datetime.now())
+    return redirect('/')
 
 # @app.route('/logged')
 # @login_required
