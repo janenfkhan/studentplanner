@@ -39,7 +39,7 @@
       <h1>Event List</h1>
       <div class="event-list">
         <ul>
-            {% if user == "user" %}
+            {% if user == user %}
 	            <li>Event: {{event.types}}. {{ event.event }} on {{ event.date }}. Description: {{event.description}}</li>
 	        {% endif %}
 
