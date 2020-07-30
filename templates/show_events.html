@@ -39,9 +39,14 @@
       <h1>Event List</h1>
       <div class="event-list">
         <ul>
-          {% for event in events %}
+            {% if user == "user" %}
+	            <p>Software engineering internships coming soon!</p>
+	        {% endif %}
+
+
+          <!-- {% for event in events %}
             <li>Event: {{event.types}}. {{ event.event }} on {{ event.date }}. Description: {{event.description}}</li>
-          {% endfor %}
+          {% endfor %} -->
         </ul>
       </div>
     </body>
