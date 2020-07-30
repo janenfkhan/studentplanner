@@ -4,9 +4,9 @@
         <title>Events</title>
 
     <!-- <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16"> -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}?q={{ time }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}?q={{ time }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}?q={{ time }}">
     <link rel="manifest" href="site.webmanifest">
 
         <!-- Font Awesome CSS -->
@@ -44,6 +44,16 @@
     </head>
     <body>
       <a class="nav-link active" style="text-align: center; font-size: 50px;" href="/index">Event List</a>
+        
+        {% for event in events %}
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">{{ event.event }} <span> <p>Event Type:{{event.types}}</p> </span> </h1>
+                    <p class="lead">{{event.description}} on {{ event.date }}.</p>
+                </div>
+            </div>
+        {% endfor %}
+
       <div class="event-list">
         <ul>
           {% for event in events %}
