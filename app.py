@@ -12,7 +12,7 @@ from flask import url_for, session
 from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from auth_decorator import login_required
-import quickstart
+# import quickstart
 # import events
 
 # -- Initialization section --
@@ -68,10 +68,10 @@ def schedule():
 @app.route('/events')
 def events():
     
-    return quickstart.main()
-    # collection = mongo.db.schedule
-    # events = collection.find({})
-    # return render_template('show_events.html', events = events, time=datetime.now())
+    # return quickstart.main()
+    collection = mongo.db.schedule
+    events = collection.find({})
+    return render_template('show_events.html', events = events, time=datetime.now())
 
 @app.route('/new')
 def new():
@@ -110,7 +110,7 @@ def login():
 def authorize():
     google = oauth.create_client('google')  # create the google oauth client
     token = google.authorize_access_token()  # Access token from google (needed to get user info)
-    resp = google.get('userinfo')  # userinfo contains stuff u specificed in the scrope
+    resp = google.get('userinfo')  # userinfo contains stuff u specificed in the scope
     user_info = resp.json()
     user = oauth.google.userinfo()  # uses openid endpoint to fetch user info
     # Here you use the profile/user data that you got and query your database find/register the user
