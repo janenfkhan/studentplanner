@@ -96,3 +96,12 @@ h2{
     font-family: 'Varela Round', sans-serif;
     text-align: center;
 }
+
+footer {
+    margin-top: 70px;
+    background-color: indigo;
+}
+
+#dropdown{
+    margin-left: 50%;
+}
