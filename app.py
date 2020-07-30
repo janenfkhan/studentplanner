@@ -121,6 +121,7 @@ def authorize():
 
 
 @app.route('/internship_finder', methods=['GET', 'POST'])
+@login_required
 def internship_finder():
     return render_template('internship_finder.html')
 @app.route('/internship_results/<industry>', methods=["GET", "POST"])
