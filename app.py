@@ -130,7 +130,6 @@ def internship_finder():
 def internship_results(industry):
     return render_template('internship_results.html', industry=industry, time=datetime.now())
 
-
 @app.route('/logout')
 def logout():
     for key in list(session.keys()):

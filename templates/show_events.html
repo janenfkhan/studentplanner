@@ -46,21 +46,21 @@
       <a class="nav-link active" style="text-align: center; font-size: 50px;" href="/index">Event List</a>
         
         {% for event in events %}
-            <div class="jumbotron jumbotron-fluid">
+            <div class="jumbotron jumbotron-fluid events">
                 <div class="container">
-                    <h1 class="display-4">{{ event.event }} <span> <p>Event Type:{{event.types}}</p> </span> </h1>
+                    <h1 class="display-4">{{ event.event }}  </h1><span> <p>Event Type:{{event.types}}</p> </span>
                     <p class="lead">{{event.description}} on {{ event.date }}.</p>
                 </div>
             </div>
         {% endfor %}
 
-      <div class="event-list">
+      <!-- <div class="event-list">
         <ul>
           {% for event in events %}
             <li>Event: {{event.types}}. {{ event.event }} on {{ event.date }}. Description: {{event.description}}</li>
           {% endfor %}
         </ul>
-      </div>
+      </div> -->
     </body>
     <footer class="page-footer font-small indigo">
 ​
