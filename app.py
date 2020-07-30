@@ -120,6 +120,14 @@ def authorize():
     return redirect('/schedule')
 
 
+@app.route('/internship_finder', methods=['GET', 'POST'])
+def internship_finder():
+    return render_template('internship_finder.html')
+@app.route('/internship_results/<industry>', methods=["GET", "POST"])
+def internship_results(industry):
+    return render_template('internship_results.html', industry=industry, time=datetime.now())
+
+
 @app.route('/logout')
 def logout():
     for key in list(session.keys()):

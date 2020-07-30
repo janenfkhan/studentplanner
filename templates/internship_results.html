@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <title>Internship Suggestions</title>
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+
+    <script>
+        
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
+
+</head>
+
+<body>
+	<!-- <h1>Internship Suggestions</h1> -->
+
+	{% if industry == "data_science" %}
+	<ul>Possible data science internships:
+		<li>Data science internships coming soon!</li>
+	</ul>
+	{% endif %}
+
+	{% if industry == "education" %}
+	<p>Education internships coming soon!</p>
+	{% endif %}
+
+	{% if industry == "engineering" %}
+	<p>Engineering internships coming soon!</p>
+	{% endif %}
+
+	{% if industry == "finance" %}
+        <table class="table" >
+            <thead>
+                <tr class="table-primary" id=headers>
+                    <th scope="col">Company</th>
+                    <th scope="col">Internships Page</th>
+                    <th scope="col" id=description>Company Description (per company website)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-secondary">
+                    <th scope="row">Bank of America</th>
+                    <td><a href ="https://campus.bankofamerica.com/opportunities.html">Bank of America Internships Page</a></td>
+                    <td>Bank of America provides people, companies and institutional investors the financial products and services they need to help achieve their financial goals at every stage of their lives.</td>
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">Goldman Sachs</th>
+                    <td><a href ="https://www.goldmansachs.com/careers/students/programs/">Goldman Sachs Internships Page</a></td>
+                    <td>The Goldman Sachs Group, Inc. is a leading global investment banking, securities and investment management firm that provides a wide range of financial services to a substantial and diversified client base that includes corporations, financial institutions, governments and individuals.</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">J.P. Morgan Chase</th>
+                    <td><a href ="https://careers.jpmorgan.com/us/en/students/programs">J.P. Morgan Chase Internships Page</a></td>
+                    <td>J.P. Morgan is a global leader in financial services, offering solutions to the world's most important corporations, governments and institutions in more than 100 countries.</td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">Morgan Stanley</th>
+                    <td><a href ="https://www.morganstanley.com/people-opportunities/students-graduates/programs">Morgan Stanley Internships Page</a></td>
+                    <td>At Morgan Stanley, clients come first. We help individuals, families, institutions and governments raise, manage and distribute the capital they need to achieve their goals.</td>
+                </tr>
+                <tr class="table-info">
+                    <th scope="row">Wells Fargo</th>
+                    <td><a href ="https://www.wellsfargojobs.com/internships-and-development-programs">Wells Fargo Internships Page</a></td>
+                    <td>Wells Fargo & Company is a diversified, community-based financial services company with $1.9 trillion in assets. Wells Fargo’s vision is to satisfy our customers’ financial needs and help them succeed financially.</td>
+                </tr>
+            </tbody>
+        </table>
+	{% endif %}
+
+	{% if industry == "healthcare" %}
+	<p>Healthcare internships coming soon!</p>
+	{% endif %}
+
+	{% if industry == "law" %}
+        <table class="table" >
+            <thead>
+                <tr class="table-primary" id=headers>
+                    <th scope="col">Company</th>
+                    <th scope="col">Internships Page</th>
+                    <th scope="col" id=description>Company Description (per company website)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <th scope="row">Cleary Gottlieb Steen and Hamilton</th>
+                    <td><a href ="https://www.clearygottlieb.com/locations/new-york/legal-landing-page/careers-interior-pages/summer-associate-program">Cleary Gottlieb Steen and Hamilton</a></td>
+                    <td>Since 1946 our lawyers and staff have worked across practices, industries, jurisdictions and continents to provide clients with simple, actionable approaches to their most complex legal and business challenges, whether domestic or international. </td>
+                </tr>
+                <tr class="table-info">
+                    <th scope="row">Covington and Burling</th>
+                    <td><a href ="https://www.cov.com/en/careers/lawyers/summer-associates">Covington and Burling Internships Page</a></td>
+                    <td>Our distinctively collaborative culture allows us to be truly one team globally, drawing on the diverse experience of lawyers and advisors across the firm by seamlessly sharing insight and expertise. What sets us apart is our ability to combine the tremendous strength in our litigation, investigations, and corporate practices with deep knowledge of policy and policymakers, and one of the world’s leading regulatory practices.</td>
+                </tr>
+                <tr class="table-secondary">
+                    <th scope="row">Cravath, Swaine & Moore</th>
+                    <td><a href ="https://www.cravath.com/summerprogram/">Cravath, Swaine & Moore Internships Page</a></td>
+                    <td>Cravath has been known as one of the premier U.S. law firms for two centuries. Each of our practice areas is highly regarded, and our lawyers are recognized around the world for their commitment to the representation of our clients’ interests.Our goal is to be the firm of choice for clients with respect to their most challenging legal issues, most significant business transactions and most critical disputes.</td>
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">Davis Polk and Wardell</th>
+                    <td><a href ="https://careers.davispolk.com/summer-program">Davis Polk and Wardell Internships Page</a></td>
+                    <td>High-profile transactions. Ground-breaking litigation. Deals that make an impact on how the world does business. Davis Polk lawyers handle significant matters for the world’s leading companies.</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">Simpson Thacher</th>
+                    <td><a href ="https://www.stblaw.com/your-career/summer-program">Simpson Thacher Internships Page</a></td>
+                    <td>Since 1884, many of the world’s largest organizations have turned to us for smart solutions to critical commercial challenges. Today, more than 1,000 lawyers in ten global offices put the collective experience of the Firm to work for every client we serve.</td>
+                </tr>
+            </tbody>
+        </table>
+	{% endif %}
+
+	{% if industry == "real_estate" %}
+	<p>Real estate internships coming soon!</p>
+	{% endif %}
+
+	{% if industry == "science" %}
+    <table class="table" >
+            <thead>
+                <tr class="table-primary" id=headers>
+                    <th scope="col">Company</th>
+                    <th scope="col">Internships Page</th>
+                    <th scope="col" id=description>Company Description (per company website)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-secondary">
+                    <th scope="row">NASA</th>
+                    <td><a href ="https://intern.nasa.gov/">NASA Internships Page</a></td>
+                    <td>The National Aeronautics and Space Administration (NASA) is an independent agency of the United States Federal Government that deals with space exploration and aeronautics, the operating and designing of planes.</td>
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">Thermo Fisher Scientific</th>
+                    <td><a href ="https://jobs.thermofisher.com/global/en/students-internships">Thermo Fisher Scientific Internships Page</a></td>
+                    <td>Thermo Fisher Scientific Inc. is the world leader in serving science. Our Mission is to enable our customers to make the world healthier, cleaner and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies or increasing productivity in their laboratories, we are here to support them.</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">Sierra Nevada Corporation</th>
+                    <td><a href ="https://www.sncorp.com/careers/students/">Sierra Nevada Corporation Internships Page</a></td>
+                    <td>From engineers and scientists to cyber experts and software developers, SNC brings together nearly 4,000 team members committed to solving the world's toughest and most complex technology challenges.</td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">Oracle</th>
+                    <td><a href ="https://www.oracle.com/corporate/careers/students-grads/">Oracle Internships Page</a></td>
+                    <td>Our mission is to help people see data in new ways, discover insights, unlock endless possibilities.</td>
+                </tr>
+                <tr class="table-info">
+                    <th scope="row">Wells Fargo</th>
+                    <td><a href ="https://www.wellsfargojobs.com/internships-and-development-programs">Wells Fargo Internships Page</a></td>
+                    <td>Wells Fargo & Company is a diversified, community-based financial services company with $1.9 trillion in assets. Wells Fargo’s vision is to satisfy our customers’ financial needs and help them succeed financially.</td>
+                </tr>
+            </tbody>
+        </table>
+	{% endif %}
+
+	{% if industry == "software_engineering" %}
+	<p>Software engineering internships coming soon!</p>
+	{% endif %}
+</body>
+
+</html>
