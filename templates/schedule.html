@@ -39,14 +39,14 @@
 	</script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_16x16.png') }}">
     <!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg justify-content-center">
-        <a class="nav-link active" style="text-align: center; font-size: 50px;" href="/index">Student Planner</a>
+        <a class="nav-link active" id="head" style="text-align: center; font-size: 50px;" href="/index">Student Planner</a>
 	</nav>
-        <h2> You are logged in as {{name}}</h2>
+        <h2 id="logged"> You are logged in as {{name}}</h2>
     <ul class="nav justify-content-center">
 		<li class="nav-item">
 			<a class="nav-link active" href="/events">View events</a>

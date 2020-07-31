@@ -94,7 +94,7 @@ def new_event():
         events.insert({'event': event_name, "date": date, "description": description, 'types': types, "user":user})
         collection = mongo.db.schedule
         events = collection.find({})
-    return redirect('/events')
+    return redirect('/events', time=datetime.now())
 
 # @app.route('/logged')
 # @login_required
@@ -119,13 +119,13 @@ def authorize():
     # and set ur own data in the session not the profile from google
     session['profile'] = user_info
     session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
-    return redirect('/schedule')
+    return redirect('/schedule', time=datetime.now())
 
 
 @app.route('/internship_finder', methods=['GET', 'POST'])
 @login_required
 def internship_finder():
-    return render_template('internship_finder.html')
+    return render_template('internship_finder.html', time=datetime.now())
 @app.route('/internship_results/<industry>', methods=["GET", "POST"])
 def internship_results(industry):
     return render_template('internship_results.html', industry=industry, time=datetime.now())

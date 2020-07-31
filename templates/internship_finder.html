@@ -38,7 +38,7 @@
 	</script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon_16x16.png') }}">
 	<!-- import the webpage's stylesheet -->
-	<link rel="stylesheet" type="text/css" href="static/css/style.css?q={{ time }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
 </head>
 ​
 <body>
